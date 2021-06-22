@@ -1,7 +1,7 @@
-/*c6-13 抛出 IllegalStateException
+/*c6-14 自訂異常
 */
-fun main (){
-    var swordsJuqqling: Int ? = null
+fun main(){
+    var swordsJuqqling: Int? = null
     val isJigglingProficient = (1..3).shuffled().last() == 3
     if(isJigglingProficient){
         swordsJuqqling = 2
@@ -12,4 +12,8 @@ fun main (){
 }
 fun proficiencyCheck(swordsJuqqling: Int?) {
     swordsJuqqling ?: throw IllegalStateException("Player cannot juggle swords")
+
+    class UnskilledSwordJugglerException() {
+        IllegalStateException("Player cannot juggle swords")
+    }
 }
