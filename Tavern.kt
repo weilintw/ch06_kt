@@ -1,8 +1,12 @@
-import java.util.*
-/*c6-8 使用 !!. 運算子
+/*c6-9 使用 !=null 檢查 null
 */
-fun main (){
-    var beverage = readLine()!!.replaceFirstChar { if ( it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString()}
-    // beverage = null
+fun main(){
+    var beverage = readLine()
+    beverage = null
+    if (beverage != null){
+        beverage = beverage.capitalize()
+    } else {
+        println("I can't do that without crashing - beverage was null")
+    }
     println(beverage)
 }
