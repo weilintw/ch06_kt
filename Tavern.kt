@@ -1,4 +1,4 @@
-/*c6-9 使用 !=null 檢查 null
+/*c6-10 使用 空合併邏算子
 */
 fun main(){
     var beverage = readLine()
@@ -8,5 +8,6 @@ fun main(){
     } else {
         println("I can't do that without crashing - beverage was null")
     }
-    println(beverage)
+    var beverageServer: String = beverage ?: "Buttered Ale"
+    println(beverageServer)
 }
