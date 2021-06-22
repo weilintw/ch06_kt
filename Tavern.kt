@@ -1,6 +1,7 @@
-/*c6-2 定義一個可空變數
+/*c6-3 重新指派null
 */
 fun main(){
     var beverage = readLine()
+    //beverage = null
     println(beverage)
 }
