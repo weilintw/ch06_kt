@@ -1,13 +1,10 @@
-/*c6-10 使用 空合併邏算子
+/*c6-11 增加抛劍雜耍邏輯
 */
 fun main(){
-    var beverage = readLine()
-    beverage = null
-    if (beverage != null){
-        beverage = beverage.capitalize()
-    } else {
-        println("I can't do that without crashing - beverage was null")
+    var swordsJuqqling: Int? = null
+    val isJigglingProficient = (1..3).shuffled().last() == 3
+    if(isJigglingProficient){
+        swordsJuqqling = 2
     }
-    var beverageServer: String = beverage ?: "Buttered Ale"
-    println(beverageServer)
+    println("You juggle $swordsJuqqling swords!")
 }
