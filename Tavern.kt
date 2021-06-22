@@ -1,4 +1,4 @@
-/*c6-16 處理異常, try catch 語句
+/*c6-17 使用先決條例 checkNotNull
 */
 import java.lang.IllegalStateException
 fun main(){
@@ -15,8 +15,11 @@ fun main(){
     println("You juggle $swordsJuqqling swords！")
 }
 fun proficiencyCheck(swordsJuqqling: Int?) {
-    swordsJuqqling ?: throw UnskilledSwordJugglerException()
+    //swordsJuqqling ?: throw UnskilledSwordJugglerException()
+    checkNotNull(swordsJuqqling,{"玩家不會耍劍......"})
 }
+/*
 class UnskilledSwordJugglerException():
     IllegalStateException("玩家不會耍劍......")
+*/
 
