@@ -1,4 +1,4 @@
-/*c6-5 會發生編譯時明錯誤,因capitalize未考慮讀取值可能為空
+/*c6-6 使用安全呼叫運算子 ?.
 */
 fun main(){
     var beverage = readLine()?.capitalize()
