@@ -1,4 +1,4 @@
-/*c6-3 重新指派null
+/*c6-4 註解一行程式
 */
 fun main(){
     var beverage = readLine()
