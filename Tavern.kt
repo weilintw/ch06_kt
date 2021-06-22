@@ -1,4 +1,4 @@
-/*c6-11 增加抛劍雜耍邏輯
+/*c6-12 增加第3把劍，程式可能因未捕獲異常
 */
 fun main(){
     var swordsJuqqling: Int? = null
@@ -6,5 +6,6 @@ fun main(){
     if(isJigglingProficient){
         swordsJuqqling = 2
     }
+    swordsJuqqling = swordsJuqqling!!.plus(1)
     println("You juggle $swordsJuqqling swords!")
 }
